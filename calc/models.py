@@ -2,12 +2,16 @@ from django.db import models
 from django.forms import ModelForm
 from django import forms
 
-class Review(models.Model):
+class BasicChecku(models.Model):
+    description=models.CharField(max_length=100)
+class ElectricalChecku(models.Model):
+    description=models.CharField(max_length=100)
+class MechanicalChecku(models.Model):
+    description=models.CharField(max_length=100)
+class InstallationChecku(models.Model):
+    description=models.CharField(max_length=100)
 
-    BasicChecku=models.CharField(max_length=100)
-    ElectricalChecku= models.CharField(max_length=100)
-    MechanicalChecku=models.CharField(max_length=100)
-    InstallationChecku=models.CharField(max_length=100)
-
-    ChilledwaterChecku=models.CharField(max_length=100)
-    Name=models.CharField(max_length=100)
+class ChilledwaterChecku(models.Model):
+    description=models.CharField(max_length=100)
+class Name(models.Model):
+    description=models.CharField(max_length=100)
